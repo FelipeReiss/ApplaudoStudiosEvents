@@ -5,6 +5,7 @@ import com.hackerrank.gevents.model.Event;
 import com.hackerrank.gevents.service.EventService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
+import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -30,6 +31,12 @@ public class EventController {
   @RequestMapping(path = API_V1 + EVENT_PATH, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
   public Event createEvent(@RequestBody @Valid EventDto eventDto){
     return eventService.save(eventDto);
+  }
+
+  @ApiOperation(value = "Returns all events in Data base ")
+  @RequestMapping(path = API_V1 + EVENT_PATH, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+  public List<Event> sampleGet(){
+    return eventService.getAllEvents();
   }
 
 }
