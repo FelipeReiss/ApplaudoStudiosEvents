@@ -32,7 +32,7 @@ public enum EventType {
   public static EventType fromText(String code){
     return fromValue(code).orElseThrow(() ->
         new ResponseStatusException(
-            HttpStatus.BAD_REQUEST, String.format("Invalid Gender Type: { [%s] }", code)));
+            HttpStatus.BAD_REQUEST, String.format("Invalid Event Type: { [%s] }", code)));
   }
 
   @Override
