@@ -1,4 +1,4 @@
 INSERT INTO EVENT (EVENT_UID, TYPE, PUBLIC_IND, REPO_ID, ACTOR_ID) VALUES
-  (SQ_EVENT.NEXTVAL, 'PushEvent', 1, 10, 1),
-  (SQ_EVENT.NEXTVAL, 'ReleaseEvent', 1, 20, 2),
-  (SQ_EVENT.NEXTVAL, 'WatchEvent', 2, 30, 3);
+  (SQ_EVENT.NEXTVAL, 'PushEvent', 'Y', 10, 1),
+  (SQ_EVENT.NEXTVAL, 'ReleaseEvent', 'Y', 20, 2),
+  (SQ_EVENT.NEXTVAL, 'WatchEvent', 'Y', 30, 3);
